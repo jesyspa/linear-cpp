@@ -26,10 +26,11 @@
  * sure your compiler can handle that.  Clang is probably the most friendly
  * compiler, but GCC or MSVC should be fine, too.
  *
- * For setting up your work environment, see:
- *  - http://latedev.wordpress.com/2011/06/22/windows-c-ides-a-quick-tour/
- *  - http://latedev.wordpress.com/2012/04/13/howto-create-your-first-project-in-visual-c/
- *  - http://latedev.wordpress.com/2011/07/08/the-gcc-command-line-part-1/
+ * There's a number of tutorials online about setting up your compiler.  I like
+ * the ones at http://latedev.wordpress.com , but there are others if you'd like
+ * to use an IDE not covered there.  Dev-C++ is not recommended due to being
+ * outdated.  If you want to read more about the C++ language or standard
+ * library, http://en.cppreference.com/w/ has articles on almost everything.
  */
 
 /* Every chapter of the book is a correct program.  This is only the foreword,
