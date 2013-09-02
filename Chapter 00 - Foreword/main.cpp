@@ -22,8 +22,8 @@
  * in another programming language and to know how arithmetic operators such as
  * +, -, *, / and comparison operators such as ==, !=, <, <=, >, >= work.  I
  * also expect you to have a vague idea of what functions, types and variables
- * are.  Finally, I'll be using C++11 features wherever they are useful, so make
- * sure your compiler can handle that.  Clang is probably the most friendly
+ * are.  Finally, I'll be using fairly new features wherever they are useful, so
+ * make sure your compiler can handle that.  Clang is probably the most friendly
  * compiler, but GCC or MSVC should be fine, too.
  *
  * There's a number of tutorials online about setting up your compiler.  I like

@@ -5,6 +5,10 @@ chapter at every step.
 
 Download at: https://github.com/jesyspa/linear-cpp/archive/master.zip
 
+Via a bash shell, compiling all chapters:
+
+    for a in Chapter*; do g++ -std=c++11 -o "$a/out" "$a"/*.cpp; done
+
 Future chapters plan:
 Chapter 1x - Classes
 Chapter 1y - Intermezzo: Const Correctness
@@ -20,6 +24,7 @@ Appendices - Declaration Syntax, Pointers to Members, Switch, The Preprocessor
 
 Other plans:
  - More specific IDE setup instructions
+ - Compiling advice
  - Script to generate Makefiles and MSVC projects for each chapter
  - Exercises!
 

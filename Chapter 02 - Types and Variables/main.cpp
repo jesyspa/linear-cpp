@@ -4,9 +4,9 @@
  * look at how to define variables, and for that we need to know a little about
  * types.
  *
- * The type of a variable specifies what operations we can perform on that
- * variable, and how such operations will behave.  Let's start with a few
- * examples:
+ * The type of a variable specifies the possible values, what operations we can
+ * perform on that variable, and how such operations will behave.  Let's start
+ * with a few examples:
  *
  *    int is the type used for whole numbers.  We can add, subtract, multiply
  *    and divide ints, though division only gives the whole part: be careful, as
@@ -32,8 +32,8 @@
  *    quotes, while string literals use double quotes.
  *
  *    std::string is a type used for strings; that is, fragments of text.
- *    Unlike the types we saw above, this is not a built-in type, though it is a
- *    standard one.  In order to use an std::string, we will need to include
+ *    Unlike the types we saw above, this is not a primitive type, though it is
+ *    a standard one.  In order to use an std::string, we will need to include
  *    string.  It supports a large number of operations, such as getting the
  *    string length or getting the character at some index.  Note that string
  *    literals are not std::strings -- however, we can create std::strings from
