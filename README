@@ -1,0 +1,25 @@
+    Linear C++
+
+A C++ tutorial that can (hopefully?) be followed without jumping from chapter to
+chapter at every step.
+
+Download at: https://github.com/jesyspa/linear-cpp/archive/master.zip
+
+Future chapters plan:
+Chapter 1x - Classes
+Chapter 1y - Intermezzo: Const Correctness
+Chapter 2x - Exceptions
+Chapter 2y - Templates
+Chapter 3x - RAII
+Chapter 3y - Inheritance
+Chapter 4x - Pointers
+Unplaced - Casting, Iterators, References, Scope, Storage Duration, Undefined
+           Behaviour, Volatile, Metaprogramming, Unions and Variants, Boost,
+           C++14, File IO
+Appendices - Declaration Syntax, Pointers to Members, Switch, The Preprocessor
+
+Other plans:
+ - More specific IDE setup instructions
+ - Script to generate Makefiles and MSVC projects for each chapter
+ - Exercises!
+

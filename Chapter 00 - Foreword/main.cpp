@@ -31,6 +31,10 @@
  * to use an IDE not covered there.  Dev-C++ is not recommended due to being
  * outdated.  If you want to read more about the C++ language or standard
  * library, http://en.cppreference.com/w/ has articles on almost everything.
+ *
+ * If you have any questions, feel free to submit an issue on
+ *      https://github.com/jesyspa/linear-cpp/issues
+ * or ask me by email to jesyspa@gmail.com
  */
 
 /* Every chapter of the book is a correct program.  This is only the foreword,
