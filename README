@@ -17,9 +17,9 @@ Chapter 2y - Templates
 Chapter 3x - RAII
 Chapter 3y - Inheritance
 Chapter 4x - Pointers
-Unplaced - Casting, Iterators, References, Scope, Storage Duration, Undefined
-           Behaviour, Volatile, Metaprogramming, Unions and Variants, Boost,
-           C++14, File IO
+Unplaced - Casting, Iterators, Scope, Storage Duration, Undefined Behaviour,
+           Volatile, Metaprogramming, Unions and Variants, Boost, C++14,
+           File IO
 Appendices - Declaration Syntax, Pointers to Members, Switch, The Preprocessor
 
 Other plans:
@@ -27,4 +27,6 @@ Other plans:
  - Compiling advice
  - Script to generate Makefiles and MSVC projects for each chapter
  - Exercises!
+ - Generating more human-readable files from the tutorials (or the other way
+   around?)
 
