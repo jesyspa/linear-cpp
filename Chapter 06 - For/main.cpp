@@ -19,7 +19,7 @@
  *
  * The initialisation is a definition or expression.  You can define multiple
  * variables of the same type, but you cannot define multiple variables of
- * different types -- there's simply no space.  The next part is the condition,
+ * different types -- there's simply no room.  The next part is the condition,
  * which is exactly like in a while loop.  The last is the step; it behaves much
  * as if it were the last statement in the body of the for, but is limited to
  * being an expression.
@@ -88,6 +88,9 @@ int main() {
      * more, but we usually don't need it; for example, if we just want to take
      * the sum, we only care about the elements and not about where in the
      * vector they are.
+     *
+     * At the moment, we also can't modify the elements while looping over the
+     * vector this way; however, we'll see a way to do that fairly soon.
      */
 
     int total = 0;

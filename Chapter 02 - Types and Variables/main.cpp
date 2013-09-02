@@ -5,7 +5,8 @@
  * types.
  *
  * The type of a variable specifies what operations we can perform on that
- * variable.  Let's start with a few examples:
+ * variable, and how such operations will behave.  Let's start with a few
+ * examples:
  *
  *    int is the type used for whole numbers.  We can add, subtract, multiply
  *    and divide ints, though division only gives the whole part: be careful, as
@@ -13,13 +14,14 @@
  *    store; if your program adds two ints that are too large, the results can
  *    be unpredictable and unpleasant.  Dividing by zero is not allowed.
  *
- *    double is the type used for numbers which aren't necessarily whole.  We
- *    can add, subtract, multiply and divide doubles, but the results are not
- *    precise. However, if you can tolerate some error, they can still be very
- *    useful.  An example of a double is 5.3, though there is a number of ways
- *    of writing them.  Dividing by zero is still not allowed.
+ *    double is the type used for numbers which aren't necessarily whole; they
+ *    are sometimes also called floating point numbers.  We can add, subtract,
+ *    multiply and divide doubles, but the results are not precise.  However, if
+ *    you can tolerate some error, they can still be useful.  An example of a
+ *    double literal is 5.3; there's a number of other ways of writing them,
+ *    though.  Dividing by zero is still not allowed.
  *
- *    bool is a type which has only two members: true and false.  It is used to
+ *    bool is a type which has only two values: true and false.  It is used to
  *    represent things which can be aptly described with one of those two words.
  *    Amongst other things, comparison operators will return bool.
  *
@@ -29,12 +31,13 @@
  *    the character a.  Character literals like 'a' are surrounded by single
  *    quotes, while string literals use double quotes.
  *
- *    std::string is a type used for strings; that is, bits of text.  Unlike the
- *    types we saw above, this is not a built-in type, though it is a standard
- *    one.  In order to use an std::string, we will need to include string.  It
- *    supports a large number of operations, such as getting the string length
- *    or getting the character at some index.  Note that string literals are not
- *    std::strings -- however, we can create std::strings from them.
+ *    std::string is a type used for strings; that is, fragments of text.
+ *    Unlike the types we saw above, this is not a built-in type, though it is a
+ *    standard one.  In order to use an std::string, we will need to include
+ *    string.  It supports a large number of operations, such as getting the
+ *    string length or getting the character at some index.  Note that string
+ *    literals are not std::strings -- however, we can create std::strings from
+ *    them.
  *
  * Now that we know what types are, let's include what we need and get into main
  * to experiment a little.
@@ -74,11 +77,12 @@ int main() {
     // from it until you've given it some value.  With types like std::string,
     // we don't have to worry about that: the string will be empty.
     //
-    // The way we defined y here, its initial value will be the current of x.
-    // If we want to, we can change x and y later:
+    // The way we defined y here, its initial value will be the current value of
+    // x.  If we want to, we can change x and y later:
     y = 2*x;
     x = y + 5;
-    // Now y will be equal to two times the value of x.
+    // Now y will be equal to two times the value of x, and x will equal the new
+    // value of y plus five.  See:
     std::cout << "x = " << x << "\n";
     std::cout << "y = " << y << "\n";
 

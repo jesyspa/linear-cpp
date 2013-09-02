@@ -50,6 +50,9 @@ int main() {
         // expect it to be, though you may lose some precision if the value
         // can't be stored exactly.
         double double_total = total;
+        // Dividing a double by an int works like dividing a double by a double.
+        // All other operations work similarly; if either operand is a double,
+        // the whole thing becomes a double.
         std::cout << "Floating point average: " << double_total/count << "\n";
     }
 

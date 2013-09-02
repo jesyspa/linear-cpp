@@ -25,6 +25,11 @@
  * are.  Finally, I'll be using C++11 features wherever they are useful, so make
  * sure your compiler can handle that.  Clang is probably the most friendly
  * compiler, but GCC or MSVC should be fine, too.
+ *
+ * For setting up your work environment, see:
+ *  - http://latedev.wordpress.com/2011/06/22/windows-c-ides-a-quick-tour/
+ *  - http://latedev.wordpress.com/2012/04/13/howto-create-your-first-project-in-visual-c/
+ *  - http://latedev.wordpress.com/2011/07/08/the-gcc-command-line-part-1/
  */
 
 /* Every chapter of the book is a correct program.  This is only the foreword,

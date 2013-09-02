@@ -8,9 +8,9 @@
 // This, like any line starting with a #, is a preprocessor directive.  Such
 // lines are instructions for manipulating the program text.  The #include
 // directive, which is what we will use most often, states that the contents of
-// a certain file should be inserted instead of it.  In this case, we ask for
-// the file iostream.  The io stands for input output, and that's what we'll be
-// using it for.
+// a certain file should be inserted where the directive is.  In this case, we
+// ask for the file iostream.  The io stands for input output, and that's what
+// we'll be using it for.
 #include <iostream>
 
 /* Now that we have the things we need to do input and output available to us,
@@ -37,7 +37,7 @@
  * declared in there.
  */
 
-// Now we define (and thus declare) the main function:
+// Now we define (and thus also declare) the main function:
 int main() {
     /* Output in C++ is stream-based.  We have a stream, and some value we want
      * to put into it, and then we use the << operator to insert the value into

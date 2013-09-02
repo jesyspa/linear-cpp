@@ -24,8 +24,8 @@
  *          statements...
  *      }
  *
- * The condition is something that results in type bool, and the statements are
- * as many statements as we'd like to put there.  If the condition evaluates to
+ * The condition is something that results in type bool, and you can have as
+ * many statements in the body as you'd like.  If the condition evaluates to
  * true, the statements will be executed; otherwise, we skip to after the if
  * statement.
  *
@@ -50,6 +50,10 @@ int main() {
     // !true == false and !false == true.
     if (!std::cin) { // if std::cin is false
         std::cout << "That's not a number!\n";
+        // Once a value has been returned, the function stops executing.  This
+        // means that a return in main works as an "early exit" from the whole
+        // program.
+        //
         // We return 1 to indicate that the program did not complete
         // successfully.  As we will be using this program interactively it does
         // not matter much; however, this is still neater than returning 0 as if
@@ -80,7 +84,7 @@ int main() {
      *
      * If condition is true, the first statements will be executed; if not, the
      * other ones will be.  Once we're done with whichever statements we are
-     * executing we continue with the rest of the code.
+     * executing we continue with the code after the else clause.
      */
 
     // We can use this to compare the two values the user entered:
