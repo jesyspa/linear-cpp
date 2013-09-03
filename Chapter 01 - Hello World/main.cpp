@@ -78,3 +78,18 @@ int main() {
     return 0;
 }
 
+/* The explanation that std::cout should be treated as a single name may be
+ * unsatisfying to those with more programming experience.  If you really wish
+ * to see it as a compound entity, you can read it as "the thing named cout from
+ * std".  There's a variety of reasons we'd like to be able to have different
+ * places provide things with the same name, and we'll eventually cover them.
+ * However, giving that whole explanation now would be entirely unlinear, and
+ * wouldn't help with understanding the coming few chapters.
+ *
+ * Here's what the practical part boils down: several names separated by :: are
+ * a compound name for something, and we currently don't need to distinguish
+ * compound names from non-compound ones.  We will see many such names, for
+ * types, functions, and variables, and they shouldn't come as a surprise.  When
+ * talking about things we will sometimes drop the std::, but we'll always write
+ * it out in code until we get far enough for the proper rules to be introduced.
+ */

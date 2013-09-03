@@ -48,6 +48,9 @@
  * something much like the above.  This saves some pain; for example, imagine if
  * two files used CHAPTER_08_VECTOR_ALGOS_HPP to guard themselves?
  *
+ * This isn't a standard feature yet, so before using #pragma once, make sure
+ * you'll only be using compilers that do support it.
+ *
  * Also, some people will use names like __CHAPTER_08_VECTOR_ALGOS_HPP__.  While
  * they will often work, any names with two consecutive underscores (or starting
  * with an underscore followed by a capital letter) are reserved.  If you use
