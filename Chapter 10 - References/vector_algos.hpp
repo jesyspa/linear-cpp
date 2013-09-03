@@ -1,5 +1,5 @@
-#ifndef CHAPTER_09_VECTOR_ALGOS_HPP
-#define CHAPTER_09_VECTOR_ALGOS_HPP
+#ifndef CHAPTER_10_VECTOR_ALGOS_HPP
+#define CHAPTER_10_VECTOR_ALGOS_HPP
 
 #include <vector>
 #include <iostream>
@@ -28,5 +28,20 @@ inline int average(std::vector<int> const& v) {
         return 0;
     return sum(v)/v.size();
 }
+
+// We're not going to change the type of sort.  We need to perform a copy of the
+// vector anyway; we may as well do that when the vector is passed in -- there
+// are cases where this is faster than doing it later.
+std::vector<int> sort(std::vector<int> v);
+
+// On the other hand, now that we are taking a reference to a vector here, we
+// can return an iterator.  The vector we are searching is the one that is in
+// the function calling us, so the iterator can still be valid after we return
+// it.
+//
+// Instead of returning an std::vector<int>::iterator, we return an
+// std::vector<int>::const_iterator.  This is also an iterator, but it doesn't
+// allow us to modify the values it refers to.
+std::vector<int>::const_iterator binary_search(std::vector<int> const& v, int val);
 
 #endif

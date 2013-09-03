@@ -47,3 +47,54 @@ std::vector<int> filter_greater_than(std::vector<int> const& v, int x) {
     return result;
 }
 
+// We move the declarations out now that they're no longer a surprise.
+using iterator = std::vector<int>::iterator;
+iterator partition(iterator begin, iterator end);
+void sort_impl(iterator begin, iterator end);
+
+std::vector<int> sort(std::vector<int> v) {
+
+    sort_impl(v.begin(), v.end());
+    return v;
+}
+
+void sort_impl(iterator begin, iterator end) {
+    if (end - begin <= 1)
+        return;
+
+    auto pivot = partition(begin, end);
+    sort_impl(begin, pivot);
+    sort_impl(pivot+1, end);
+}
+
+iterator partition(iterator begin, iterator end) {
+    auto pivot = begin++;
+
+    for (; begin != end; ++begin) {
+        if (*pivot > *begin) {
+            std::swap(*pivot, *begin);
+            ++pivot;
+            std::swap(*pivot, *begin);
+        }
+    }
+
+    return pivot;
+}
+
+std::vector<int>::const_iterator binary_search(std::vector<int> const& v, int val) {
+    auto bottom = v.begin(), top = v.end();
+
+    while (top != bottom) {
+        auto mid = bottom + (top - bottom)/2;
+        if (*mid < val)
+            bottom = mid+1;
+        else if (*mid > val)
+            top = mid;
+        else
+            return mid;
+    }
+
+    return v.end();
+}
+
+
