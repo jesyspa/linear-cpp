@@ -75,6 +75,4 @@ int main() {
     std::cout << "Your input, sorted using a custom comparison function: ";
     display_range(v.begin(), v.end());
     std::cout << "\n";
-
-    return 0;
 }

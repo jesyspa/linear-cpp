@@ -31,6 +31,4 @@ int main() {
         else
             std::cout << i << " was not amongst the numbers you entered.\n";
     }
-
-    return 0;
 }

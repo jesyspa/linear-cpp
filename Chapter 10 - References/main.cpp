@@ -289,6 +289,4 @@ int main() {
     for (auto e : filter_greater_than(v, 5))
         std::cout << " " << e;
     std::cout << "\n";
-
-    return 0;
 }

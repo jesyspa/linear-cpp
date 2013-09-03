@@ -94,5 +94,13 @@ int main() {
         std::cout << " " << e;
     std::cout << "\n";
 
-    return 0;
+    // By the way, we've been writing return 0; at the end of every main
+    // function.  As I said before, the main function is weird: for example, you
+    // can't call it from inside your program.  Another (nice) quirk it has is
+    // that you are allowed to omit the return statement at the end, and the
+    // compiler will assume you returned 0.  This means we can stop writing it
+    // out now and let the compiler do the work.
+    //
+    // As you may have noticed, I'm extremely lazy and love letting software do
+    // work for me.
 }
