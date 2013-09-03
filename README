@@ -10,16 +10,11 @@ Via a bash shell, compiling all chapters:
     for a in Chapter*; do g++ -std=c++11 -o "$a/out" "$a"/*.cpp; done
 
 Future chapters plan:
-Chapter 1x - Classes
-Chapter 1y - Intermezzo: Const Correctness
-Chapter 2x - Exceptions
-Chapter 2y - Templates
-Chapter 3x - RAII
-Chapter 3y - Inheritance
-Chapter 4x - Pointers
-Unplaced - Casting, Iterators, Scope, Storage Duration, Undefined Behaviour,
+Near future - Exceptions, Templates
+Later - Classes, Operator Overloading, RAII, Pointers
+Unplaced - Casting, Scope, Storage Duration, Undefined Behaviour,
            Volatile, Metaprogramming, Unions and Variants, Boost, C++14,
-           File IO
+           File IO, Optional
 Appendices - Declaration Syntax, Pointers to Members, Switch, The Preprocessor
 
 Other plans:
