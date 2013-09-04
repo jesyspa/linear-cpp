@@ -75,7 +75,8 @@ std::vector<int> filter_greater_than(std::vector<int> v, int x);
 inline int average(std::vector<int> v) {
     if (v.empty())
         return 0;
-    return sum(v)/v.size();
+    int size = v.size();
+    return sum(v)/size;
 }
 
 // We only want to "guard" the portion above.

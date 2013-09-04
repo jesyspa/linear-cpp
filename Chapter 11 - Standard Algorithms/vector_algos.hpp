@@ -13,7 +13,7 @@ std::vector<int> filter_greater_than(std::vector<int> const& v, int x);
 inline int average(std::vector<int> const& v) {
     if (v.empty())
         return 0;
-    return sum(v)/v.size();
+    return sum(v)/int(v.size());
 }
 
 bool all_positive(std::vector<int> const& v);

@@ -167,7 +167,11 @@ int average(std::vector<int> v) {
     // They're still there in the compiled program, but we as the programmer
     // don't need to explain how to get the sum of a vector every time we want
     // it.
-    return sum(v)/v.size();
+    //
+    // As we've seen before, the type of v.size() is std::size_t.  We want the
+    // result to be an int, so we create an int out of v.size() before using it.
+    int size = v.size();
+    return sum(v)/size;
 }
 
 int sum(std::vector<int> v) {

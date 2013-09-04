@@ -26,7 +26,23 @@ std::vector<int> filter_greater_than(std::vector<int> const& v, int x);
 inline int average(std::vector<int> const& v) {
     if (v.empty())
         return 0;
-    return sum(v)/v.size();
+    // Now that we've seen how to create a variable of a certain type on the
+    // fly, we could use int{v.size()} to turn v.size() into an int.  However,
+    // this would be a narrowing conversion, as we're losing part of the data.
+    // We know that if a collection has more elements than the maximum value of
+    // an int, we won't be getting any kind of meaningful average anyway, so we
+    // don't mind that.
+    //
+    // To tell the compiler that this really is what we want, we use the older
+    // and less strict int(v.size()), which does allow such unsafe conversions.
+    //
+    // Be careful with int()!  There are things it can do that you definitely
+    // don't want.  Don't use it unless you know that int{} won't do, and you've
+    // checked that it really does what you expect it to.
+    //
+    // We'll see some safer ways to do even what we're doing now, but I'd like
+    // to leave that bag of tricks for another day.
+    return sum(v)/int(v.size());
 }
 
 // We're not going to change the type of sort.  We need to perform a copy of the
