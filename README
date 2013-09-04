@@ -9,6 +9,13 @@ Via a bash shell, compiling all chapters:
 
     for a in Chapter*; do g++ -std=c++11 -o "$a/out" "$a"/*.cpp; done
 
+If you're on OS X, you should probably get clang with XCode instead; in that
+case, the above command should use clang++ instead of g++.
+
+Also, when compiling your own files on either of those two platforms, I
+recommend you add -Wall and -Wextra to your flags.  Clang users may also want to
+add -fsanitize=undefined .
+
 Future chapters plan:
 Near future - Exceptions, Templates
 Later - Classes, Operator Overloading, RAII, Pointers
