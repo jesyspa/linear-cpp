@@ -5,6 +5,8 @@
 #include <string>
 #include <algorithm>
 #include <iterator>
+#include <vector>
+#include <numeric>
 
 /* A template of a function allows us to write a function and then specify some
  * of the types later.  When we specify the types, a specific instantiation of

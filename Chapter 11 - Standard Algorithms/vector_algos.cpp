@@ -2,6 +2,7 @@
 #include <iostream>
 #include <string>
 #include <algorithm>
+#include <numeric>
 #include <iterator>
 
 std::vector<int> read_int_vector(std::istream& stream) {
