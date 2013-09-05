@@ -1,4 +1,4 @@
-/* Suggested order: main.cpp, vector_algos.hpp
+/* Suggested order: main.cpp (beginning), vector_algos.hpp, main.cpp (end)
  *
  * In this chapter we'll take a look at templates.  We won't cover them entirely
  * right away; templates have some very advanced features that we don't

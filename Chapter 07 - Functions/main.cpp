@@ -100,8 +100,15 @@ std::vector<int> read_int_vector() {
 // point on, we won't have to repeat this code.  The details will come in the
 // next chapter; for now, let's take a look at a few more functions.
 
-/* In order to make functions on vectors, we need to be able to pass the
- * function some data.  For this we have parameters, expanding the syntax to:
+/* The function we wrote above allows us to execute a block of code from
+ * wherever we want and have it give us back a value.  What we'll do now is
+ * parametrise that block of code by a value.  That is, we'll make the function
+ * accept values from the caller.  Those values are copied, so setting them only
+ * changes what the function sees, not what the caller sees.  However, this also
+ * means the function has full freedom to do what it wants with them, without
+ * anyone ever finding out.
+ *
+ * For a function to accept parameters we have to expand our syntax a little:
  *
  *      return_type function_name(param_type1 param1, param_type2 param2 ...) {
  *          statements...

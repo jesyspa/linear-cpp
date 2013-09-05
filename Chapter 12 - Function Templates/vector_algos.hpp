@@ -182,7 +182,9 @@ bool all_positive(std::vector<T> const& v) {
 
 // Instead of generalising int and taking std::vector<T>::const_iterator, let's
 // allow any kind of iterator.  std::copy requires an input iterator to read
-// from, so we'll call the type parameter InputIt; this is fairly common.
+// from, so we'll call the type parameter InputIt; this is fairly common.  This
+// is purely for people reading our code; the compiler doesn't care what we call
+// it.
 template<typename InputIt>
 void display_range(InputIt begin, InputIt end) {
     std::cout << "{ ";
