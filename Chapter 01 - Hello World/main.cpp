@@ -67,6 +67,7 @@ int main() {
     // over again would get tedious.  Fortunately, we can chain insertions:
     ((((std::cout << " == ") << 3) << " + ") << 2) << "\n";
 
+    // TODO: Explain about std::cout << " == " being an expression.
     // This works because the result of std::cout << " == " is again std::cout.
     // The above is equivalent to writing five statements where std::cout is
     // named every time.  Even better, though, the way the << operator is

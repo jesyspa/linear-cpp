@@ -10,7 +10,7 @@
  *
  *    int is the type used for whole numbers.  We can add, subtract, multiply
  *    and divide ints, though division only gives the whole part: be careful, as
- *    this means 1/2 == 0.  There is a maximum and minimum value an int can
+ *    this means 2/3 == 0.  There is a maximum and minimum value an int can
  *    store; if your program adds two ints that are too large, the results can
  *    be unpredictable and unpleasant.  Dividing by zero is not allowed.
  *
@@ -18,12 +18,11 @@
  *    are sometimes also called floating point numbers.  We can add, subtract,
  *    multiply and divide doubles, but the results are not precise.  However, if
  *    you can tolerate some error, they can still be useful.  An example of a
- *    double literal is 5.3; there's a number of other ways of writing them,
- *    though.  Dividing by zero is still not allowed.
+ *    double literal is 5.3.  Dividing by zero is still not allowed.
  *
  *    bool is a type which has only two values: true and false.  It is used to
  *    represent things which can be aptly described with one of those two words.
- *    Amongst other things, comparison operators will return bool.
+ *    Amongst other things, comparison operators return bool.
  *
  *    char is a type for representing characters.  We haven't seen any
  *    characters by themselves yet, but the string literals we used in the last
@@ -31,13 +30,14 @@
  *    the character a.  Character literals like 'a' are surrounded by single
  *    quotes, while string literals use double quotes.
  *
- *    std::string is a type used for strings; that is, fragments of text.
- *    Unlike the types we saw above, this is not a primitive type, though it is
- *    a standard one.  In order to use an std::string, we will need to include
- *    string.  It supports a large number of operations, such as getting the
- *    string length or getting the character at some index.  Note that string
- *    literals are not std::strings -- however, we can create std::strings from
- *    them.
+ *    std::string is a type used for strings; that is, fragments of text.  The
+ *    types above were all primitive ones, but std::string is not, though it is
+ *    standard.  In order to use an std::string, we will need to include string.
+ *    It supports a large number of operations, such as getting the string
+ *    length or getting the character at some index.  Note that string literals
+ *    are not std::strings -- however, we can create std::strings from them.
+ *
+ * TODO: Add more about primitive vs nonprimitive types.
  *
  * Now that we know what types are, let's include what we need and get into main
  * to experiment a little.
@@ -83,8 +83,8 @@ int main() {
     x = y + 5;
     // Now y will be equal to two times the value of x, and x will equal the new
     // value of y plus five.  See:
-    std::cout << "x = " << x << "\n";
-    std::cout << "y = " << y << "\n";
+    std::cout << "x == " << x << "\n";
+    std::cout << "y == " << y << "\n";
 
     // Let's try reading into our std::string.
     std::cout << "Enter a string: ";

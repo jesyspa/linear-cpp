@@ -51,7 +51,7 @@ int main() {
     // we introduce another type.  Technically, the correct type to use is
     // std::vector<int>::size_type.  However, that's rather a mouthful and we
     // will instead use std::size_t, which is the same thing on many systems.
-    // If your code might have to run on something unusual, watch out!
+    // For small vectors and normal platforms this'll work.
     std::size_t i = 0;
     std::size_t greatest_index = 0;
     std::size_t least_index = 0;

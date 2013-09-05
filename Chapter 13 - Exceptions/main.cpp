@@ -113,6 +113,7 @@ catch (std::exception& e) {
     // e.what() returns the message we attached to the std::runtime_error or
     // std::domain_error
     std::cerr << "Error: " << e.what() << "\n";
+    return -1;
 }
 // As I said before, we really don't want exceptions escaping main.  We can use
 // a catch (...) clause to catch errors of any type.  However, as the value can
@@ -120,6 +121,7 @@ catch (std::exception& e) {
 // wouldn't know what to do with it!
 catch (...) {
     std::cerr << "Unknown error.\n";
+    return -1;
 }
 
 /* So far, I've been talking about exceptions as an altogether positive
