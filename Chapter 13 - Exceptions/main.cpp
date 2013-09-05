@@ -176,13 +176,16 @@ catch (...) {
  * you cannot know, and you'll have a lot of code on your hands if you write a
  * catch clause for every function you call.
  *
- * Fortunately, it's not all doom and gloom.  When these problems became
- * apparent, Bjarne Stroustrup himself came and showed us the way, providing a
- * solution that makes exceptions usable even when there is code that must run
- * no matter whether an exception is thrown or not.  The code we have
- * written so far will work even in the presence of exceptions; as we get into
- * more advanced features, I will come back to this point.
+ * If exceptions make C++ harder, why use them?  It turns out that making our
+ * code exception-safe is often a good idea anyway.  When you have a group of
+ * functions that must always be executed together, it generally pays to put a
+ * little extra effort into guaranteeing that; even if exceptions don't break
+ * it, a careless code change or a change in design might.
  *
- * For now, just keep in mind that we are now in C++ Hard Mode.  The next
- * chapter will be something much more like a "real" project.
+ * Besides, it isn't all doom and gloom.  Solutions to many of these problems
+ * have been found, and once generalised, they can save effort.  In the end,
+ * once the pitfalls have been studied and bridges have been built, the results
+ * are better.
+ *
+ * In my opinion, anyway.
  */
