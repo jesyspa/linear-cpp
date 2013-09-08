@@ -37,6 +37,13 @@
  * or ask me by email to jesyspa@gmail.com
  */
 
+/* A note to those with experience in C: while C++ does allow a significant
+ * portion of C, good solutions in C often aren't particularly good solutions in
+ * C++.  I suggest working through the material without resorting to any tricks
+ * you learned in C.  In particular when it comes to exceptions, we'll see that
+ * the problems and solutions that result interact poorly with C-style code.
+ */
+
 /* Every chapter of the book is a correct program.  This is only the foreword,
  * but it would be a pity to make it an exception, so we'll make it a program
  * that does nothing.

@@ -164,7 +164,7 @@ void print_next_token(std::istream& stream) {
 
     // Now that we've ignored the spaces, we can check whether there's anything
     // more to parse:
-    if (!std::cin) {
+    if (!stream) {
         std::cout << "{ end_of_file: \"\" }";
         return;
     }

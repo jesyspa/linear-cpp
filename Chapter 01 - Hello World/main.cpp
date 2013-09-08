@@ -21,8 +21,8 @@
  * what that name refers to.  In the last program, we declared main as an int(),
  * which you can read as "a function taking no parameters and returning int".
  * We can declare a name as many times as we want, as long as we declare it to
- * be the same type every time.  Using a name before it has been declared is not
- * allowed.
+ * be the same type every time.  Using a name before it has been declared is
+ * usually not allowed; I'll mention exceptions as we come to them.
  *
  * When talking about functions, a definition does everything a declaration does
  * but also provides the body of the function.  In the example in the foreword,
@@ -61,6 +61,9 @@ int main() {
 
     // String literals aren't the only the only things we can print.  You can
     // print numbers, too, in exactly the same way.
+    //
+    // Note that this only prints 5 -- if we want to print a newline, we need to
+    // do that separately.
     std::cout << 5;
 
     // We often want to print multiple things, and repeating std::cout over and
