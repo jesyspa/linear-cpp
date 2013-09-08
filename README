@@ -8,21 +8,19 @@ Download at: https://github.com/jesyspa/linear-cpp/archive/master.zip
 Via a bash shell, compiling all chapters:
 
     for a in Chapter*; do g++ -std=c++11 -o "$a/out" "$a"/*.cpp; done
-	
+
 On OSX:
+ - You must install XCode and the Command Line Tools package. As of 9/04/2013, Mac OS X doesn't ship with a C++11 compiler.
+ - Then use clang to build:
 
-	- You must install XCode and the Command Line Tools package. As of 9/04/2013, Mac OS X doesn't ship with a C++11 compiler.
-	- Then use clang to build:
-
-	for a in Chapter*; do clang++ --std=c++11 --stdlib=libc++ "$a"/*.cpp -o "$a"/out; done
+    for a in Chapter*; do clang++ --std=c++11 --stdlib=libc++ "$a"/*.cpp -o "$a"/out; done
 
 Also, when compiling your own files on either of those two platforms, I
 recommend you add -Wall and -Wextra to your flags.  Clang users may also want to
 add -fsanitize=undefined .
 
 Future chapters plan:
-Near future - Exceptions, Templates
-Later - Classes, Operator Overloading, RAII, Pointers
+Soon: Classes, Enums, Operator Overloading, Shared Pointers, Inheritance
 Unplaced - Casting, Scope, Storage Duration, Undefined Behaviour,
            Volatile, Metaprogramming, Unions and Variants, Boost, C++14,
            File IO, Optional
