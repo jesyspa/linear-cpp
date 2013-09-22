@@ -26,25 +26,6 @@
 #include <vector>
 #include <algorithm>
 
-void print_token(Token const& tok) {
-    std::cout << "{ ";
-
-    // This chain of ifs and elses doesn't look particularly good.  We'll see
-    // how we can make it better later on.
-    if (tok.type == open_paren_token)
-        std::cout << "open_paren_token";
-    else if (tok.type == close_paren_token)
-        std::cout << "close_paren_token";
-    else if (tok.type == name_token)
-        std::cout << "name_token";
-    else if (tok.type == number_token)
-        std::cout << "number_token";
-    else if (tok.type == end_of_file_token)
-        std::cout << "end_of_file_token";
-
-    std::cout << ", \"" << tok.value << "\" }\n";
-}
-
 int main() try {
     // There are no implicit conversions to string happening here: the >> and <<
     // operators really are taking Tokens.
