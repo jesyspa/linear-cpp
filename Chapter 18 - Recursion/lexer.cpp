@@ -2,31 +2,13 @@
 #include <cctype>
 #include <stdexcept>
 
-// We keep this helper function around: it doesn't need any class data so it
-// doesn't make sense to make it a member function.
 bool isoperator(char c) {
     std::string const valid_chars = "+*-/!=<>";
     return valid_chars.find(c) != std::string::npos;
 }
 
-/* We need to define all those functions we declared Lexer to have.  We again
- * use the scope resolution operator, now to specify that we are indeed defining
- * a member function of Lexer, not a normal function of the same name.
- */
-
-// We've already initialized current_position, so we don't have to do anything
-// about that in our constructor.  On the other hand, input_stream and so we are
-// forced to initialize it: just assigning to it in the constructor body would
-// not be enough.  We use the constructor-initializer:
 Lexer::Lexer(std::istream& is) : input_stream(is) {}
-// The : starts the constructor-initializer, then input_stream(is) binds
-// input_stream to is, and finally {} is the empty constructor body.
 
-// This function looks much like extract_next_token.  However, we don't have to
-// pass the stream around explicitly; instead, we can use input_stream from any
-// of our member functions.  When inside a member function, calling another
-// member function without specifying what instance we are calling it on calls
-// it on the current instance.
 Token Lexer::extract() {
     ignore_whitespace();
 
@@ -56,30 +38,17 @@ Lexer::Position Lexer::get_position() const {
 }
 
 Lexer::operator bool() const {
-    // Here we again use the function-like form of conversion.  This is because
-    // operator bool() in std::istream is also explicit, and so simply returning
-    // would give us an error.
     return bool(input_stream);
 }
 
 bool Lexer::peek(char& c) const {
-    // std::istream doesn't allow us to peek(c) like it allowed us to get(c), so
-    // we have to work around this.
-
-    // peek returns an int, so that we can check for end-of-file.
     int x = input_stream.peek();
-    // std::char_traits<char>::eof returns the value that indicates an end of file.
     if (x == std::char_traits<char>::eof())
         return false;
-    // Otherwise, the implicit conversion is guaranteed to be safe.
     c = x;
     return true;
 }
 
-// ignore is where the work regarding position tracking happens.  This isn't the
-// most efficient way of implementing a Lexer; we almost always call peek double
-// the number of times necessary.  However, at this point the gain in safety is
-// worth the drop in performance.
 void Lexer::ignore() {
     char c;
     if (!peek(c))
@@ -155,6 +124,3 @@ std::ostream& operator<<(std::ostream& os, Lexer::Position pos) {
     os << "(line: " << pos.line << ", column:" << pos.column << ")";
     return os;
 }
-
-/* With the lexer implemented, let's look at the resulting main function.
- */

@@ -1,4 +1,5 @@
 out
 *.o
 *.swp
+build.sh
 
