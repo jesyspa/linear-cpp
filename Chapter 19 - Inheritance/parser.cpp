@@ -52,9 +52,9 @@ std::shared_ptr<Expression> p_expression(Lexer& lexer) {
 
     if (token.type == name_token)
         return std::make_shared<VariableExpr>(token.value);
-    else if (token.type == number_token)
+    if (token.type == number_token)
         return std::make_shared<NumberExpr>(std::stoi(token.value));
-    else if (token.type == open_paren_token)
+    if (token.type == open_paren_token)
         return p_function_call(lexer);
 
     throw std::logic_error{"Unrecognised token type."};

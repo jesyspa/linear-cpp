@@ -52,7 +52,7 @@ bool Lexer::peek(char& c) const {
 void Lexer::ignore() {
     char c;
     if (!peek(c))
-        std::logic_error{"ignoring past end of file"};
+        throw std::logic_error{"ignoring past end of file"};
     input_stream.ignore();
     if (c == '\n') {
         current_position.line += 1;

@@ -15,9 +15,11 @@ bool isoperator(char c) {
  */
 
 // We've already initialized current_position, so we don't have to do anything
-// about that in our constructor.  On the other hand, input_stream and so we are
-// forced to initialize it: just assigning to it in the constructor body would
-// not be enough.  We use the constructor-initializer:
+// about that in our constructor.  On the other hand, we get the value for
+// input_stream from a parameter, and we'd like to initialize it.  Furthermore,
+// being a reference, input_stream cannot be default-constructed, and so we use
+// the constructor-initializer.  (Even if we could have used an assignment, a
+// constructor-initializer is neater, and may be faster.)
 Lexer::Lexer(std::istream& is) : input_stream(is) {}
 // The : starts the constructor-initializer, then input_stream(is) binds
 // input_stream to is, and finally {} is the empty constructor body.
@@ -83,7 +85,7 @@ bool Lexer::peek(char& c) const {
 void Lexer::ignore() {
     char c;
     if (!peek(c))
-        std::logic_error{"ignoring past end of file"};
+        throw std::logic_error{"ignoring past end of file"};
     input_stream.ignore();
     if (c == '\n') {
         current_position.line += 1;
