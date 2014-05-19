@@ -3,20 +3,18 @@
 import xml.etree.ElementTree as ET
 import re, os, sys
 
+# Add Project/Option with attribute title for the project title.
+# Add Project/Item with attribute filename for every source file.
 base_config = (
 """<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_project_file>
     <FileVersion major="1" minor="6" />
     <Project>
-        <!-- <Option title="CHAPTER_HERE" /> -->
-        <Option pch_mode="2" />
-        <Option compiler="gcc" />
         <Build>
             <Target title="Debug">
                 <Option output="bin/Debug/program" prefix_auto="1" extension_auto="1" />
                 <Option object_output="obj/Debug/" />
                 <Option type="1" />
-                <Option compiler="gcc" />
                 <Compiler>
                     <Add option="-g" />
                 </Compiler>
@@ -25,9 +23,9 @@ base_config = (
                 <Option output="bin/Release/program" prefix_auto="1" extension_auto="1" />
                 <Option object_output="obj/Release/" />
                 <Option type="1" />
-                <Option compiler="gcc" />
                 <Compiler>
                     <Add option="-O2" />
+                    <Add option="-NDEBUG" />
                 </Compiler>
                 <Linker>
                     <Add option="-s" />
@@ -40,13 +38,6 @@ base_config = (
             <Add option="-std=c++11" />
             <Add option="-pedantic" />
         </Compiler>
-        <!-- <Unit filename="FILE_HERE.cpp" /> -->
-        <Extensions>
-            <envvars />
-            <code_completion />
-            <debugger />
-            <lib_finder disable_auto="1" />
-        </Extensions>
     </Project>
 </CodeBlocks_project_file>
 """)
