@@ -5,7 +5,7 @@ A C++ tutorial that can (hopefully?) be followed without jumping from chapter to
 ## Downloads:
 
 - [No project files](https://github.com/jesyspa/linear-cpp/archive/master.zip)
-- [GCC Code::Blocks project files](https://github.com/jesyspa/linear-cpp/archive/with_gcc_codeblocks_project_files.zip)
+- [Code::Blocks project files](https://github.com/jesyspa/linear-cpp/archive/with_codeblocks_project_files.zip)
 
 I'll look into making MinGW Code::Block projects sometimes soon.
 
