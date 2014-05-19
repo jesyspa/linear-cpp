@@ -1,9 +1,13 @@
 Linear C++
 
-A C++ tutorial that can (hopefully?) be followed without jumping from chapter to
-chapter at every step.
+A C++ tutorial that can (hopefully?) be followed without jumping from chapter to chapter at every step.
 
-Download at: https://github.com/jesyspa/linear-cpp/archive/master.zip
+Downloads:
+
+    No project files: https://github.com/jesyspa/linear-cpp/archive/master.zip
+    GCC Code::Blocks: https://github.com/jesyspa/linear-cpp/archive/with_gcc_codeblocks_project_files.zip
+
+I'll look into making MinGW Code::Block projects sometimes soon (tm).
 
 Via a bash shell, compiling all chapters:
 
@@ -15,22 +19,14 @@ On OSX:
 
     for a in Chapter*; do clang++ --std=c++11 --stdlib=libc++ "$a"/*.cpp -o "$a"/out; done
 
-Also, when compiling your own files on either of those two platforms, I
-recommend you add -Wall and -Wextra to your flags.  Clang users may also want to
-add -fsanitize=undefined .
+Also, when compiling your own files on either of those two platforms, I recommend you add -Wall and -Wextra to your flags.  Clang users may also want to add -fsanitize=undefined .
 
 Future chapters plan:
-Soon: Classes, Enums, Operator Overloading, Shared Pointers, Inheritance
-Unplaced - Casting, Scope, Storage Duration, Undefined Behaviour,
-           Volatile, Metaprogramming, Unions and Variants, Boost, C++14,
-           File IO, Optional
+Soon: Enums, More Inheritance, Unions and Variants, Practical Examples
+Unplaced - Casting, Scope, Storage Duration, Undefined Behaviour, Volatile, Metaprogramming, Boost, C++14, File IO, Optional
 Appendices - Declaration Syntax, Pointers to Members, Switch, The Preprocessor
 
 Other plans:
- - More specific IDE setup instructions
- - Compiling advice
- - Script to generate Makefiles and MSVC projects for each chapter
  - Exercises!
- - Generating more human-readable files from the tutorials (or the other way
-   around?)
+ - Generating more human-readable files from the tutorials (or the other way around?)
 
