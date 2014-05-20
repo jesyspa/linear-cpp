@@ -29,5 +29,5 @@
             <Add option="-std=c++11" />
             <Add option="-pedantic" />
         </Compiler>
-    <Option title="chapter_18_recursion" /><Unit filename="token.cpp" /><Unit filename="lexer.cpp" /><Unit filename="parser.cpp" /><Unit filename="main.cpp" /></Project>
+    <Option title="chapter_18_recursion" /><Unit filename="token.cpp" /><Unit filename="parser.hpp" /><Unit filename="lexer.hpp" /><Unit filename="token.hpp" /><Unit filename="lexer.cpp" /><Unit filename="parser.cpp" /><Unit filename="main.cpp" /></Project>
 </CodeBlocks_project_file>

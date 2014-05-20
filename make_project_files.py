@@ -45,13 +45,16 @@ base_config = (
 def make_chapter_name(dirname):
     return dirname.replace(' - ', ' ').replace(' ', '_').lower()
 
+def is_code_file(filename):
+    return re.search(r'\.[ch](?:pp)?$', filename)
+
 def get_code_files(dirname):
-    return [x for x in os.listdir(dirname) if x.endswith('.cpp')]
+    return [x for x in os.listdir(dirname) if is_code_file(x)]
 
 def make_config(dirname):
     files = get_code_files(dirname)
     if not files:
-        return
+        raise Exception("No code files")
     chapter_name = make_chapter_name(dirname)
     config = ET.ElementTree(ET.fromstring(base_config))
     project = config.find("Project")
@@ -68,6 +71,6 @@ def main():
         try:
             make_config(dirname)
         except Exception as e:
-            print("failed:", dirname, e)
+            print("Generating build files for", dirname, "failed:", e)
 
 main()

@@ -29,5 +29,5 @@
             <Add option="-std=c++11" />
             <Add option="-pedantic" />
         </Compiler>
-    <Option title="chapter_12_function_templates" /><Unit filename="main.cpp" /></Project>
+    <Option title="chapter_12_function_templates" /><Unit filename="main.cpp" /><Unit filename="vector_algos.hpp" /></Project>
 </CodeBlocks_project_file>

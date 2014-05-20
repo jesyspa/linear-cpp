@@ -29,5 +29,5 @@
             <Add option="-std=c++11" />
             <Add option="-pedantic" />
         </Compiler>
-    <Option title="chapter_09_iterators" /><Unit filename="vector_algos.cpp" /><Unit filename="main.cpp" /></Project>
+    <Option title="chapter_09_iterators" /><Unit filename="vector_algos.hpp" /><Unit filename="vector_algos.cpp" /><Unit filename="main.cpp" /></Project>
 </CodeBlocks_project_file>

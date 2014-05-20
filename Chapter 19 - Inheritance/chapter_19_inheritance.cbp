@@ -29,5 +29,5 @@
             <Add option="-std=c++11" />
             <Add option="-pedantic" />
         </Compiler>
-    <Option title="chapter_19_inheritance" /><Unit filename="token.cpp" /><Unit filename="main.cpp" /><Unit filename="lexer.cpp" /><Unit filename="number_expr.cpp" /><Unit filename="variable_expr.cpp" /><Unit filename="parser.cpp" /><Unit filename="list_expr.cpp" /></Project>
+    <Option title="chapter_19_inheritance" /><Unit filename="lexer.hpp" /><Unit filename="token.cpp" /><Unit filename="token.hpp" /><Unit filename="main.cpp" /><Unit filename="lexer.cpp" /><Unit filename="expression.hpp" /><Unit filename="number_expr.cpp" /><Unit filename="variable_expr.cpp" /><Unit filename="parser.cpp" /><Unit filename="variable_expr.hpp" /><Unit filename="list_expr.cpp" /><Unit filename="number_expr.hpp" /><Unit filename="parser.hpp" /><Unit filename="list_expr.hpp" /></Project>
 </CodeBlocks_project_file>

@@ -29,5 +29,5 @@
             <Add option="-std=c++11" />
             <Add option="-pedantic" />
         </Compiler>
-    <Option title="chapter_16_basic_operator_overloading" /><Unit filename="token.cpp" /><Unit filename="lex.cpp" /><Unit filename="main.cpp" /></Project>
+    <Option title="chapter_16_basic_operator_overloading" /><Unit filename="token.cpp" /><Unit filename="lex.hpp" /><Unit filename="token.hpp" /><Unit filename="lex.cpp" /><Unit filename="main.cpp" /></Project>
 </CodeBlocks_project_file>

@@ -29,5 +29,5 @@
             <Add option="-std=c++11" />
             <Add option="-pedantic" />
         </Compiler>
-    <Option title="chapter_11_standard_algorithms" /><Unit filename="main.cpp" /><Unit filename="vector_algos.cpp" /></Project>
+    <Option title="chapter_11_standard_algorithms" /><Unit filename="main.cpp" /><Unit filename="vector_algos.hpp" /><Unit filename="vector_algos.cpp" /></Project>
 </CodeBlocks_project_file>
