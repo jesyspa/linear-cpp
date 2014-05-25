@@ -1,5 +1,5 @@
-#ifndef CHAPTER_17_LEXER_HPP
-#define CHAPTER_17_LEXER_HPP
+#ifndef CHAPTER_19_LEXER_HPP
+#define CHAPTER_19_LEXER_HPP
 
 #include "token.hpp"
 #include <istream>

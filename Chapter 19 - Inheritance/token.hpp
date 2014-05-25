@@ -1,5 +1,5 @@
-#ifndef CHAPTER_17_TOKEN_HPP
-#define CHAPTER_17_TOKEN_HPP
+#ifndef CHAPTER_19_TOKEN_HPP
+#define CHAPTER_19_TOKEN_HPP
 
 #include <string>
 #include <ostream>
