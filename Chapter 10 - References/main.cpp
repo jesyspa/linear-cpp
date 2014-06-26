@@ -23,6 +23,7 @@
  */
 
 #include <iostream>
+#include <string>
 
 // Recall that void means the function will not return anything.
 void reference_practice() {
