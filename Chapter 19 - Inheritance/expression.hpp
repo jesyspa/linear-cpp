@@ -23,7 +23,7 @@ struct Expression {
     // of that.
     //
     // How is Expression still useful?  We can still make references to it.
-    // Take a look at the operator>> defined below for an example.
+    // Take a look at the operator<< defined below for an example.
     virtual void print(std::ostream& out) const = 0;
 
     // One of the things we'd like to be able to do with Expressions is to
