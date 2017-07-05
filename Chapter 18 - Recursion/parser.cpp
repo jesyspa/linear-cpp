@@ -5,7 +5,7 @@
 #include <stdexcept>
 #include <cassert>
 
-// As we saw in the examples, and expression can contain another expression.
+// As we saw in the examples, an expression can contain another expression.
 // We already have a function for parsing expressions, so we may as well use
 // that for the subexpression, too.  We can't use parse_and_reprint_expression
 // directly for this purpose, as we can't give it a lexer and indentation level,
