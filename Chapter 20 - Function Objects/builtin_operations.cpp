@@ -1,6 +1,7 @@
 #include "builtin_operations.hpp"
 #include <algorithm>
 #include <functional>
+#include <numeric>
 #include <stdexcept>
 
 /* We can implement the built-in functions in "normal" C++; we don't have to
