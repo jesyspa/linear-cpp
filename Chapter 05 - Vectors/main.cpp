@@ -13,7 +13,12 @@
  *
  * Once a vector is declared to store things of a certain type, we can not
  * change it to store something else.  On the bright side, this means that given
- * a vector we always know what type of things it contains.  We also have
+ * a vector we always know what type of things it contains.
+ * Vectors can be used to store all the type of basic data types.
+ * 
+ *      std::vector<TYPE> v;
+ *
+ * We can also use vectors to store other vectors. We also have
  *
  *      v.size() // the number of elements in the vector
  *      v.empty() // whether the vector is empty
@@ -79,3 +84,9 @@ int main() {
 
     return 0;
 }
+/* 
+ * You can also learn about the standard template library in c++
+ * which contains various predefined functions that c++ provides
+ * on vectors that can be of great help when you will use c++
+ * frequently in projects.
+ */
