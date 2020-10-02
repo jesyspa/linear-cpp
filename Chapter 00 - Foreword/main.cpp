@@ -8,6 +8,9 @@
  * Like this one.
  */
 
+//Single line commnets are also helpful for short purpose, not like this one though.
+//Like this one
+
 /* I decided to call this "book" Linear C++, because most people believe you
  * can't learn C++ in a linear fashion, and I disagree.  I think existing
  * resources, particularly online ones, just teach things in entirely the wrong
@@ -22,7 +25,9 @@
  * in another programming language and to know how arithmetic operators such as
  * +, -, *, / and comparison operators such as ==, !=, <, <=, >, >= work.  I
  * also expect you to have a vague idea of what functions, types and variables
- * are.  Finally, I'll be using fairly new features wherever they are useful, so
+ * are. If you have little idea about these, you will do fine, we will learn 
+ * through the use of these very frequently. 
+ * Finally, I'll be using fairly new features wherever they are useful, so
  * make sure your compiler can handle that.  Clang is probably the most friendly
  * compiler, but GCC or MSVC should be fine, too.
  *
@@ -61,4 +66,7 @@ int main() {
  * and its return value can be used to report if any errors happened.  A return
  * value of 0 traditionally indicates success, and is what we will return in
  * most cases.
+ * You might have seen beginners using void main, but The ANSI standard says "no"
+ * to the 'void main' and thus using it can be considered wrong. 
+ * One should stop using the 'void main' if doing so.
  */
