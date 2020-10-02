@@ -96,4 +96,11 @@ int main() {
  * types, functions, and variables, and they shouldn't come as a surprise.  When
  * talking about things we will sometimes drop the std::, but we'll always write
  * it out in code until we get far enough for the proper rules to be introduced.
+ *
+ * If you have a simple program, as a beginner, which is pretty much obvious, 
+ * one can define the namespace as std.
+ * You can add "using namespace std;" below the preprocessing statement.
+ * So when we run a program to print something, “using namespace std” says
+ * if you find something that is not declared in the current scope go and check std.
+ * This way we can use directly(for simple programs) cout or cin, in place of std::cout,etc.
  */
