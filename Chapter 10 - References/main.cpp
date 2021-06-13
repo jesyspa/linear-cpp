@@ -76,7 +76,10 @@ void reference_practice() {
      *
      *      int& z1 = x, z2 = y;
      *
-     * only z1 would be a reference, and z2 would not be.  I will have an
+     * only z1 would be a reference, and z2 would not be.  If you want the nitty
+     * gritty of it, there's a great post on StackOverflow about it:
+     *    https://stackoverflow.com/a/13808933/559931
+     *
      * appendix on how these rules work exactly; fortunately, we'll soon see a
      * workaround that lets us turn any type into a "simple type".  For now,
      * when in doubt, write things out on their own line.
@@ -102,8 +105,8 @@ void reference_practice() {
     std::cout << ">  z1 == " << z1 << "\n";
     std::cout << ">  z2 == " << z2 << "\n";
 
-    // Now let's look at how it works with functions.  By the way, we can
-    // declare functions inside other functions, but we can't define them.
+    // Now let's look at how it works with functions.  By the way, we while can
+    // declare functions inside other functions, we can't define them.
     void takes_a_reference(int& i);
 
     std::cout << "\n"; // newline for readability.

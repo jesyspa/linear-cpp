@@ -39,7 +39,7 @@ std::vector<int> read_int_vector() {
     // We could use much the same implementation as we used in the last
     // examples, which assumes that if the input failed, there is nothing more
     // to read.  However, let's be a little more thorough and insist that the
-    // user keep entering data until he closes the stream.  If a file is being
+    // user keep entering data until they close the stream.  If a file is being
     // redirected this will happen when the end of the file is reached; when
     // entering data directly, Control-D will do the job on Linux, while
     // Control-Z will work on Windows.
@@ -84,8 +84,7 @@ std::vector<int> read_int_vector() {
         //
         // Here, we can mix the two because we're reading after a >> attempt
         // failed.  That means that it already got through all the whitespace
-        // and what's next is data we may be interested in.  This means we won't
-        // be telling the user about how we ignored empty lines.
+        // and what's next is data we may be interested in.
 
         std::cout << "Warning, ignoring: " << s << "\n";
     }
@@ -194,13 +193,13 @@ int sum(std::vector<int> v) {
  * practice, let's take a look at how it works and what is and isn't allowed.
  *
  * First of all, there's the question of scope.  If you define a variable inside
- * an if clause, while loop, or for loop, you will not be able to use it outside
- * it.  The same thing works with functions: a variable defined in a function
- * stays within that function.  If you want a value from one function to end up
- * in another function, then the only ways we know of so far are by passing it
- * as a parameter or by returning it.  Notice that the functions are so isolated
- * it may even appear like we're breaking the one-definition-only rule: all
- * three of main, average and sum define a variable v!
+ * a set of curly braces, you will not be able to use it outside it.  The same
+ * thing works with functions: a variable defined in a function stays within
+ * that function.  If you want a value from one function to end up in another
+ * function, then the only ways we know of so far are by passing it as a
+ * parameter or by returning it.  Notice that the functions are so isolated it
+ * may even appear like we're breaking the one-definition-only rule: all three
+ * of main, average and sum define a variable v!
  *
  * The reason this is allowed is that those three variables, even though they
  * all have the same name, reside in different functions and so are entirely
@@ -246,6 +245,4 @@ std::vector<int> filter_greater_than(std::vector<int> v, int x) {
  * at what we can do with the current tools, what the standard library has to
  * offer us, and what new features we'd like to have.
  */
-
-
 

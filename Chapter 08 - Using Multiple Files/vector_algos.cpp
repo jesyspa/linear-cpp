@@ -5,7 +5,7 @@
  * (or a header it includes) for them to be visible during the compilation
  * stage, everything we define in this file will by default be visible in the
  * linker stage.  That means that functions we define can still cause double
- * definition errors.  We will later see how to fix that.
+ * definition errors.  We will see how to fix that later.
  */
 #include "vector_algos.hpp"
 #include <iostream>

@@ -70,8 +70,9 @@ int sum(std::vector<int> v);
 // Copy the vector, leaving only elements greater than x.
 std::vector<int> filter_greater_than(std::vector<int> v, int x);
 
-// inline is not part of the return type, it says something specifically about
-// the function average.
+// inline is not part of the return type; rather, it documents that average may
+// be defined multiple times in our program, though only once per .cpp file, and
+// all definitions must be the same.
 inline int average(std::vector<int> v) {
     if (v.empty())
         return 0;
