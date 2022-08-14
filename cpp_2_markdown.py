@@ -7,7 +7,7 @@ Tested on linear-cpp tutorial.
 
 USAGE:
 
-    ./cpp2mkd.py <project directory>
+    ./cpp_2_markdown.py <project directory>
 
 Will create a new file <project directory>_ebook.md
 
@@ -27,7 +27,12 @@ DETAILS:
 
 Convert to epub with pandoc:
 
-    pandoc -M author=jesyspa --standalone -V 'header-includes="<style>pre > code.sourceCode {white-space: pre-wrap !important;}</style>" --toc --toc-depth=1 -o linear-cpp.epub linear-cpp_ebook.md
+    pandoc -M author=jesyspa \
+        --standalone \
+        -V 'header-includes="<style>pre > code.sourceCode {white-space: pre-wrap !important;}</style>"' \
+        --toc --toc-depth=1 \
+        -o linear-cpp.epub \
+        ebook.md
     # The header-includes argument is needed to wrap long code lines
 """
 
@@ -166,7 +171,11 @@ def project2mkd(directory):
     level = 1
     parents = [directory]
     dircontent = {1: ls(directory)}  # at level one
-    with open(directory + '_ebook.md', 'w') as out:
+    if directory == '.':
+        out_name = 'ebook.md'
+    else:
+        out_name = directory + '_ebook.md'
+    with open(out_name, 'w') as out:
         out.write('% ' + directory + '\n%\n%\n\n')
         
         while level:
